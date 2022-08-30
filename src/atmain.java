@@ -43,7 +43,7 @@ public class atmain {
 		return false;
 	}
 	public boolean withdrawMoney(int accountNum, double wAmt) {
-		if (accs.get(accountNum) != null&& !(accs.get(accountNum)<wAmt)&&wAmt>0) {
+		if (accs.get(accountNum) != null&& !(accs.get(accountNum)<wAmt)&&wAmt>=0) {
 			accs.put(accountNum, accs.get(accountNum) - wAmt);
 			return true;
 		}
