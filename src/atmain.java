@@ -41,7 +41,7 @@ public class atmain {
 		return false;
 	}
 	public boolean withdrawMoney(int accountNum, double wAmt) {
-		if (accs.get(accountNum) != null&& !(accs.get(accountNum)<wAmt)) {
+		if (accs.get(accountNum) != null&& !(accs.get(accountNum)<wAmt)&&wAmt>0) {
 			accs.put(accountNum, accs.get(accountNum) - wAmt);
 			return true;
 		}
@@ -56,7 +56,7 @@ public class atmain {
 		System.out.println(hi.checkBalance(0));
 		System.out.println(hi.depositMoney(0, -15));
 		System.out.println(hi.checkBalance(0));
-		System.out.println(hi.withdrawMoney(0, 13));
+		System.out.println(hi.withdrawMoney(0, -13));
 		System.out.println(hi.checkBalance(0));
 		
 	}
