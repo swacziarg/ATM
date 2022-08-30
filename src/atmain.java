@@ -25,7 +25,7 @@ public class atmain {
 		
 	}
 	public void closeAccount(int accountNum){
-		if(accs.get(accountNum) != null){
+		if(accs.get(accountNum) != null&&accs.get(accountNum)==0.0){
 			accs.remove(accountNum);
 			}
 	}
