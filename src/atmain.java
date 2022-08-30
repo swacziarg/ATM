@@ -6,10 +6,17 @@ public class atmain {
 		accs = new HashMap<Integer, Double>();
 	}
 	public void openAccount(int accountNum){
-		
+		if (accs.containsKey(accountNum)) {
+			System.out.print("FAILURE - Account already exists");
+			return;
+		}
 		accs.put(accountNum, 0.0);
 	}
 	public void openAccount(int accountNum, double deposit) {
+		if (accs.containsKey(accountNum)) {
+			System.out.print("FAILURE - Account already exists");
+			return;
+		}
 		accs.put(accountNum, deposit);
 		
 	}
@@ -36,4 +43,17 @@ public class atmain {
 		}
 		return false;
 	}
+//	public static void main (String[]args) {
+//		atmain hi = new atmain();
+//		hi.openAccount(0);
+//		hi.openAccount(13,14.0);
+//		hi.openAccount(13,14.0);
+//		System.out.println(hi.checkBalance(13));
+//		System.out.println(hi.checkBalance(0));
+//		System.out.println(hi.depositMoney(0, 15));
+//		System.out.println(hi.checkBalance(0));
+//		System.out.println(hi.withdrawMoney(0, 13));
+//		System.out.println(hi.checkBalance(0));
+//		
+//	}
 }
